@@ -74,7 +74,6 @@ overlay.addEventListener("click", () => {
     popupViews.forEach((popupView) => {
         popupView.classList.remove('modal__active');
         overlay.classList.remove("modal__active");
-        shoppingCart.classList.remove('modal__active');
         document.getElementsByTagName("body")[0].style.overflow = "auto";
     });
 })
