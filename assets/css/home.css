@@ -247,6 +247,11 @@ body {
     text-align: center;
 }
 
+.category__link a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .category__title {
     font-size: 20px;
 }
