@@ -151,12 +151,20 @@ body {
 
 /* The dots/bullets/indicators */
 
+.slider__dot {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: transparent;
+    border: 1px solid #fff;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -164,7 +172,7 @@ body {
 
 .active,
 .dot:hover {
-    background-color: #717171;
+    background-color: #fff;
 }
 
 
