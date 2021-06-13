@@ -150,6 +150,21 @@
         color: #fff;
         font-size: 18px;
     }
+
+    /* Brand */
+    .brand-container {
+        width: 90%;
+    }
+    .brand__logo {
+        min-width: 50%;
+    }
+    #btn-left {
+        left: 5%;
+    }
+    #btn-right {
+        right: 5%;
+    }
+    
     /* menu cấp 2 mobile */
     .popup__nav-hidden {
         opacity: 0;

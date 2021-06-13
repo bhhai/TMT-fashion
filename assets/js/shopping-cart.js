@@ -30,6 +30,7 @@ window.onload = function() {
                     localStorage.setItem('items', JSON.stringify(items));
                     window.location.reload();
                 }
+                alert('Thêm thành công sản phẩm vào giỏ hàng');
 
             } else {
                 alert('local storage is not working on your browser');
@@ -108,4 +109,5 @@ function Delete(e) {
     });
     localStorage.setItem('items', JSON.stringify(items));
     window.location.reload();
+    alert('Xóa thành công sản phẩm');
 };

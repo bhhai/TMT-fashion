@@ -1254,7 +1254,9 @@
 
     <div class="brand">
         <div class="product__title">THƯƠNG HIỆU</div>
-        <div class="brand-container">
+        <button id="btn-left"><i class="fas fa-chevron-left"></i></button>
+        <button id="btn-right"><i class="fas fa-chevron-right"></i></button>
+        <div class="brand-container" id="brand-slider">
             <div class="brand__logo">
                 <img src="./assets/img/brand1.png" alt="" class="brand__img">
             </div>
@@ -1367,49 +1369,10 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./assets/js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/mobile.js"></script>
     <script>
-        $('.blog-container').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: false,
-            responsive: [{
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }]
-        });
-
-        $('.brand-container').slick({
-            slidesToShow: 7,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            responsive: [{
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }]
-        });
 
         AOS.init({
             offset: 200,

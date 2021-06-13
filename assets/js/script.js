@@ -139,6 +139,7 @@ window.onload = function() {
                     items.push(item);
                     localStorage.setItem('items', JSON.stringify(items));
                     window.location.reload();
+                    alert('Thêm thành công sản phẩm vào giỏ hàng');
                 }
 
             } else {
@@ -174,6 +175,7 @@ window.onload = function() {
                     items.push(item);
                     localStorage.setItem('items', JSON.stringify(items));
                     window.location.reload();
+                    alert('Thêm thành công sản phẩm vào giỏ hàng');
                 }
 
             } else {
@@ -192,3 +194,16 @@ window.onload = function() {
 
     
 }
+
+
+var slider = document.getElementById('brand-slider');
+var btnRight = document.getElementById('btn-right');
+var btnLeft = document.getElementById('btn-left');
+
+btnRight.addEventListener('click', function() {
+    slider.scrollLeft += slider.scrollWidth / 8;
+})
+
+btnLeft.addEventListener('click', function() {
+    slider.scrollLeft -= slider.scrollWidth / 8;
+})

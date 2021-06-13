@@ -523,7 +523,9 @@ body {
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    overflow-x: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 .blog-container::-webkit-scrollbar {
@@ -533,6 +535,7 @@ body {
 .blog__item {
     position: relative;
     overflow: hidden;
+    min-width: 33.33%;
 }
 
 .blog__img-normal {
@@ -700,6 +703,7 @@ body {
 
 .brand {
     width: 100%;
+    position: relative;
     margin-top: 50px;
 }
 
@@ -707,10 +711,61 @@ body {
     width: 80%;
     margin: 50px auto;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#btn-left {
+    position: absolute;
+    left: 8%;
+    top: 60%;
+    background: rgba(255, 255, 255, .8);
+    border: 1px solid;
+    border-color: #86590d;
+    color: #86590d;
+    width: 30px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-right {
+    position: absolute;
+    right: 8%;
+    top: 60%;
+    background: rgba(255, 255, 255, .8);
+    border: 1px solid;
+    border-color: #86590d;
+    color: #86590d;
+    width: 30px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-left:hover, #btn-right:hover {
+    background-color: #86590d;
+    color: #fff;
+}
+
+.brand-container:hover#btn-left {
+    left: 10%;
+}
+.brand-container:hover#btn-right {
+    right: 10%;
+}
+
+.brand__logo {
+    min-width: 20%;
+    transition: .4s;
 }
 
 .brand__img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .regist {
