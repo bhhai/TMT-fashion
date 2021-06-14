@@ -986,3 +986,18 @@ body {
     outline: 0;
     padding: 0 10px;
 }
+
+
+/* Email */
+
+.mail-to {
+    text-decoration: none;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+}
+
+.email {
+    width: 60px;
+    height: 60px;
+}
