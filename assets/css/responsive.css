@@ -38,7 +38,10 @@
         width: 90%;
     }
     .blog__item {
-        max-width: 100%;
+        min-width: 100%;
+    }
+    .blog__item-hidd {
+        display: none;
     }
     .blog-container .slick-prev::after {
         left: 0;

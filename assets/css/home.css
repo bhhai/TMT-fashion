@@ -516,6 +516,7 @@ body {
 
 .blog {
     width: 100%;
+    position: relative;
 }
 
 .blog-container {
@@ -523,7 +524,6 @@ body {
     margin: 0 auto;
     margin-top: 30px;
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
 }
@@ -614,89 +614,7 @@ body {
 }
 
 
-/* btn */
 
-.blog__btn-prev,
-.blog__btn-next {
-    position: absolute;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, .9);
-    width: 30px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 40px;
-    text-align: center;
-    background: rgba(255, 255, 255, .8);
-    border: 1px solid;
-    border-color: #86590d;
-    color: #86590d;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-}
-
-.blog__btn-prev {
-    left: -30px;
-    opacity: 0;
-}
-
-.blog__btn-next {
-    right: -30px;
-    opacity: 0;
-}
-
-.slick-arrow {
-    visibility: hidden;
-}
-
-.slick-prev::after {
-    content: "<";
-    visibility: visible;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 40%;
-    left: -10%;
-    width: 30px;
-    height: 50px;
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-    background: rgba(255, 255, 255, .8);
-    border: 1px solid;
-    border-color: #86590d;
-    color: #86590d;
-    z-index: 11;
-    opacity: 0;
-    transition: all .5s ease-in-out;
-    cursor: pointer;
-}
-
-.slick-next::after {
-    content: ">";
-    visibility: visible;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 40%;
-    right: -10%;
-    width: 30px;
-    height: 50px;
-    font-size: 24px;
-    line-height: 40px;
-    text-align: center;
-    background: rgba(255, 255, 255, .8);
-    border: 1px solid;
-    border-color: #86590d;
-    color: #86590d;
-    z-index: 11;
-    opacity: 0;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-}
 
 
 /* Brand */
@@ -717,7 +635,7 @@ body {
     scroll-behavior: smooth;
 }
 
-#btn-left {
+.button__prev {
     position: absolute;
     left: 8%;
     top: 60%;
@@ -732,7 +650,7 @@ body {
     transition: .4s;
 }
 
-#btn-right {
+.button__next {
     position: absolute;
     right: 8%;
     top: 60%;
@@ -747,16 +665,9 @@ body {
     transition: .4s;
 }
 
-#btn-left:hover, #btn-right:hover {
+.button__prev:hover, .button__next:hover {
     background-color: #86590d;
     color: #fff;
-}
-
-.brand-container:hover#btn-left {
-    left: 10%;
-}
-.brand-container:hover#btn-right {
-    right: 10%;
 }
 
 .brand__logo {

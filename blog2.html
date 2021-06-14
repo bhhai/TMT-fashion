@@ -140,7 +140,7 @@
                 <ul class="x-100">
                     <li><a class="items-font" href="">Trang chủ</a></li>
                     <li><span style="margin-right: 10px;" class="list_item-tab">Tin tức</span></li>
-                    <li><span class="list_item-tab">Suit nam màu xanh, mặc sao cho đẹp? </span></li>
+                    <li><span class="list_item-tab">NGUYÊN TẮC PHỐI ĐỒ TẠO ĐIỂM CỘNG KHI ĐI XIN VIỆC </span></li>
                 </ul>
             </div>
             <div class="list__blog">
@@ -150,7 +150,7 @@
                             <div class="hearder__blog">
                                 <span class="nau"><i class="fas fa-folder"></i></span>
                                 <h3><i class="fas fa-star"></i>
-                                    <a href="">Suit nam màu xanh, mặc sao cho đẹp?</a></h3>
+                                    <a href="">NGUYÊN TẮC PHỐI ĐỒ TẠO ĐIỂM CỘNG KHI ĐI XIN VIỆC</a></h3>
                                 <span class="font-13px source-blog"> 
                                     Đăng bởi : Trịnh Minh Tài 
                                 </span>
@@ -179,50 +179,35 @@
                                     </ul>
                                 </div>
                                 <div class="comment__area">
-                                    <h3>2 Bình luận</h3>
+                                    <h3>Bình luận</h3>
                                     <div class="comment__list">
-                                        <li>
-                                            <div class="comment__content">
-                                                <strong>S</strong>
-                                                <span class="comment__date">23/4/2020
-                                                    <a href="">Trả lời</a>
-                                                </span>
-                                                <p class="">klascn</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="comment__content">
-                                                <strong>DFD</strong>
-                                                <span class="comment__date">22/4/2019
-                                                    <a href="">Trả lời</a>
-                                                </span>
-                                                <p class="">fdf</p>
-                                            </div>
-                                        </li>
+                                        <ul id="comen" class="comment__list">
+                                            
+                                        </ul>
                                         <h3>VIẾT BÌNH LUẬN CỦA BẠN:</h3>
                                         <div class="comment__form">
-                                            <form action="">
+                                            <form id="client" action="">
                                                 <div class="information">
                                                     <div class="form__me">
                                                         <label for="">
                                                             Họ và tên
                                                             <span class="required">*</span>
                                                         </label>
-                                                        <input type="text" name="" required id="" class="form__control">
+                                                        <input type="text" name="" required id="name" class="form__control">
                                                     </div>
                                                     <div class="form__me">
                                                         <label for="">
                                                             Email
                                                             <span class="required">*</span>
                                                         </label>
-                                                        <input type="text" name="" required id="" class="form__control">
+                                                        <input type="text" name="" required id="email" class="form__control">
                                                     </div>
                                                 </div>
                                                 <label for="">Viết bình luận 
                                                     <span  class="required">*</span>
                                                 </label>
-                                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                                                <button class="btn__comment">Gửi Bình Luận</button>
+                                                <textarea name="" id="comment" cols="30" required rows="10"></textarea>
+                                                <button type="button" class="btn__comment" onclick="Comment()">Gửi Bình Luận</button>
                                             </form>
                                         </div>
                                         <div class="content__relate">
@@ -230,9 +215,9 @@
                                             <div class="relates">
                                                 <div class="relateto">
                                                     <div class="img__relateto">
-                                                        <a href="./blog2.htm"><img src="./assets/img/blog2.jpg" class="img__relate-hover" alt=""></a>
+                                                        <a href="./blog1.htm"><img src="./assets/img/blog1.jpg" class="img__relate-hover" alt=""></a>
                                                     </div>
-                                                    <h4><a href="./blog2.htm">NGUYÊN TẮC PHỐI ĐỒ TẠO ĐIỂM CỘNG KHI ĐI XIN VIỆC</a></h4>
+                                                    <h4 style="height:57px"><a href="./blog1.html">SUIT NAM MÀU XANH, MẶC SAO CHO ĐẸP?<br></a></h4>
                                                 </div>
                                                 <div class="relateto">
                                                     <div class="img__relateto">
@@ -286,6 +271,41 @@
             </div>
         </div>
     </div>
+    <script>
+        function Comment(){
+            var Name, Email, texarea, filter;
+            Name = document.getElementById("name").value;
+            Email = document.getElementById("email").value;
+            texarea = document.getElementById("comment").value;
+            var d = new Date();
+            filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(Name == ""){
+                alert("vui lòng điền tên vào");
+            }else{
+                if(!filter.test(Email) ){
+                    alert("hãy nhập địa chỉ email hợp lệ.\nExample@gamil.com");
+                    Email.focus;
+                    return false;
+                }else{
+                    if(texarea==""){
+                        alert("vui lòng điền ý kiến của bạn vào");
+                    }
+                    else{
+                        var Coment = document.getElementById("comen");
+                        Coment.innerHTML = `<li>
+                        <div id="CMT" class="comment__content">
+                            <strong id="demo">${Name}</strong>
+                            <span  class="comment__date"><p id="da">${d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()}</p>
+                                <a id="TL" href="">Trả lời</a>
+                            </span>
+                            <p id="cm">${texarea}</p>
+                        </div> <li>`;
+                            document.getElementById("client").reset();
+                    }
+                }
+            }
+        }
+    </script>
 
 
     <!-- Footer -->

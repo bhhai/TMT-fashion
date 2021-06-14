@@ -9,7 +9,6 @@
     <link rel="shortcut icon" type="image" href="./assets/img/shortcut-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -1187,7 +1186,7 @@
                     </div>
                 </a>
             </div>
-            <div class="blog__item" data-aos="zoom-in">
+            <div class="blog__item blog__item-hidd" data-aos="zoom-in">
                 <a href="blog2.html" class="blog__link">
                     <div class="blog__img">
                         <img src="./assets/img/blog2.jpg" alt="" class="blog__img-normal">
@@ -1207,7 +1206,7 @@
                     </div>
                 </a>
             </div>
-            <div class="blog__item" data-aos="zoom-in">
+            <div class="blog__item blog__item-hidd" data-aos="zoom-in">
                 <a href="blog3.html" class="blog__link">
                     <div class="blog__img">
                         <img src="./assets/img/blog3.jpg" alt="" class="blog__img-normal">
@@ -1227,26 +1226,6 @@
                     </div>
                 </a>
             </div>
-            <div class="blog__item">
-                <a href="#" class="blog__link">
-                    <div class="blog__img">
-                        <img src="./assets/img/blog2.jpg" alt="" class="blog__img-normal">
-                    </div>
-                    <div class="blog__item-normal">
-                        <h6 class="blog__item-normal__title">
-                            Nguyên tắc phối đồ tạo điểm cộng khi đi xin việc
-                        </h6>
-                        <p class="blog__item-body">
-                            <i class="fas fa-calendar-alt"></i> 31/12/2020
-                        </p>
-                    </div>
-                    <div class="blog__item-hover">
-                        <p class="blog__item-hover__body">
-                            Tuy nhiên, trong bài viết này của SUPLO sẽ không chỉ nói riêng xanh navy mà nói cả các quy tắc phối cùng suit nam màu xanh. So với sự cổ điển của suit nam đen, sắc xanh có tính linh hoạt cao...
-                        </p>
-                    </div>
-                </a>
-            </div>
         </div>
     </div>
 
@@ -1254,8 +1233,8 @@
 
     <div class="brand">
         <div class="product__title">THƯƠNG HIỆU</div>
-        <button id="btn-left"><i class="fas fa-chevron-left"></i></button>
-        <button id="btn-right"><i class="fas fa-chevron-right"></i></button>
+        <button id="btn-left" class="button__prev"><i class="fas fa-chevron-left"></i></button>
+        <button id="btn-right" class="button__next"><i class="fas fa-chevron-right"></i></button>
         <div class="brand-container" id="brand-slider">
             <div class="brand__logo">
                 <img src="./assets/img/brand1.png" alt="" class="brand__img">
