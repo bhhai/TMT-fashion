@@ -993,8 +993,8 @@ body {
 .mail-to {
     text-decoration: none;
     position: fixed;
-    bottom: 100px;
-    right: 10px;
+    bottom: 80px;
+    right: 20px;
 }
 
 .email {
