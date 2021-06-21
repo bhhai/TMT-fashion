@@ -28,9 +28,9 @@ window.onload = function() {
                     });
                     items.push(item);
                     localStorage.setItem('items', JSON.stringify(items));
+                    alert('Thêm thành công sản phẩm vào giỏ hàng');
                     window.location.reload();
                 }
-                alert('Thêm thành công sản phẩm vào giỏ hàng');
 
             } else {
                 alert('local storage is not working on your browser');
@@ -39,7 +39,7 @@ window.onload = function() {
     }
 
     
-    // adding data to shopping cart 
+    // adding quantity to shopping cart icon
     const iconShoppingP = document.querySelector('.navbar__cart p');
     let no = 0;
     JSON.parse(localStorage.getItem('items')).map(data => {
@@ -52,14 +52,15 @@ window.onload = function() {
     const cartTotal = document.querySelector('.cart__payment-sum');
     let tableData = '';
     let totalPrice = 0;
-    tableData += `<tr class="shoppingCart__item">
-    <th class="th__product">Sản phẩm</th>
-    <th class="quantity">Số lượng</th>
-    <th class="linePrice">Tổng tiền</th>
-    <th class="remove">Xóa</th>
+    tableData += 
+    `<tr class="shoppingCart__item">
+        <th class="th__product">Sản phẩm</th>
+        <th class="quantity">Số lượng</th>
+        <th class="linePrice">Tổng tiền</th>
+        <th class="remove">Xóa</th>
     </tr>`;
     if (JSON.parse(localStorage.getItem('items'))[0] === undefined) {
-        tableData += '<tr><td>No items found</td></tr>'
+        tableData += '<tr><td>Giỏ hàng trống!</td></tr>'
     } else {
         JSON.parse(localStorage.getItem('items')).map(data => {
             const itemPrice = data.price.split('.').join('');
@@ -92,7 +93,9 @@ window.onload = function() {
                         <i class="far fa-trash-alt" onclick="Delete(this)"></i>
                     </td>
                 </tr>`;
-        });
+            });
+            // update table
+            
     }
     cardBoxTable.innerHTML = tableData;
     cartTotal.innerText = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + "₫";
