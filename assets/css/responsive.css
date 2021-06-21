@@ -345,8 +345,13 @@
     .cart__payment {
         width: 100%;
     }
-    /* Intro page */
     
+    /* Form login */
+    .form__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 

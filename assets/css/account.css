@@ -43,7 +43,7 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .form__item {
@@ -58,10 +58,14 @@
     margin-bottom: 25px;
 }
 
-.form__chidren {
+.form__box {
     width: 100%;
     margin-bottom: 20px;
+}
+
+.form__children {
     position: relative;
+    border: 1px solid #cccccc;
 }
 
 .input__icon {
@@ -82,7 +86,7 @@
 }
 
 .form__input {
-    border: 1px solid #cccccc;
+    border: none;
     height: 40px;
     border-radius: 0;
     font-weight: normal;
@@ -92,6 +96,10 @@
     box-shadow: none !important;
     padding-left: 42px !important;
     width: 100%;
+}
+
+.form__err {
+    border: 1px solid red;
 }
 
 .form__button {
@@ -139,6 +147,10 @@
     max-width: 100%;
 }
 
+.form__errMsg {
+    font-size: 12px;
+    color: red;
+}
 
 /* Contact */
 
@@ -239,4 +251,30 @@
 
 .form__btn-submit:hover {
     opacity: 1;
+}
+
+#link-register {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#link-register:hover {
+    text-decoration: underline;
+    color: #86590d;
+}
+
+.link__login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.link__login:hover {
+    color: #86590d;
+    text-decoration: underline;
+}
+
+#register__form {
+    display: none;
 }

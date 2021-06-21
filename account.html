@@ -156,22 +156,29 @@
     <!-- Form -->
     <div class="form">
         <div class="form-container">
-            <form method="POST" action="/action_page.php" class="form__item">
+            <form id="login__form" method="POST" class="form__item">
                 <div class="form__title">đăng nhập</div>
-                <div class="form__chidren">
-                    <i class="input__icon fas fa-envelope"></i>
-                    <span class="required">*</span>
-                    <input type="email" placeholder="Email của bạn" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <i class="input__icon fas fa-envelope"></i>
+                        <span class="required">*</span>
+                        <input id="email" placeholder="Email của bạn" class="form__input">
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
-                <div class="form__chidren">
-                    <span class="required">*</span>
-                    <i class="input__icon fas fa-lock"></i>
-                    <input type="password" placeholder="Nhập mật khẩu" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <span class="required">*</span>
+                        <i class="input__icon fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="Nhập mật khẩu" class="form__input">
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
                 <div class="form__button">
-                    <input type="submit" value="Đăng nhập" class="form__btn"></input>
+                    <button class="form__btn">Đăng nhập</button>
                     <div class="form__link">
                         <a href="#" class="form__forgot">Quên mật khẩu?</a>
+                        <span id="link-register">Chưa có tài khoản? Đăng ký ngay</span>
                     </div>
                 </div>
                 <div class="form__social">
@@ -183,30 +190,43 @@
                     </a>
                 </div>
             </form>
-            <form method="POST" action="/action_page.php" class="form__item">
+            <form id="register__form" class="form__item">
                 <div class="form__title">ĐĂNG KÝ THÀNH VIÊN MỚI</div>
-                <div class="form__chidren">
-                    <span class="required">*</span>
-                    <i class="input__icon fas fa-user"></i>
-                    <input type="text" placeholder="Tên" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <span class="required">*</span>
+                        <i class="input__icon fas fa-user"></i>
+                        <input type="text" id="first-name" placeholder="Tên" class="form__input" >
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
-                <div class="form__chidren">
-                    <span class="required">*</span>
-                    <i class="input__icon fas fa-user"></i>
-                    <input type="text" placeholder="Họ" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <span class="required">*</span>
+                        <i class="input__icon fas fa-user"></i>
+                        <input type="text" id="last-name" placeholder="Họ" class="form__input">
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
-                <div class="form__chidren">
-                    <span class="required">*</span>
-                    <i class="input__icon fas fa-envelope"></i>
-                    <input type="email" placeholder="Email" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <span class="required">*</span>
+                        <i class="input__icon fas fa-envelope"></i>
+                        <input placeholder="Email" id="regis__email" class="form__input">
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
-                <div class="form__chidren">
-                    <span class="required">*</span>
-                    <i class="input__icon fas fa-lock"></i>
-                    <input type="password" placeholder="Mật khẩu" class="form__input" required>
+                <div class="form__box">
+                    <div class="form__children">
+                        <span class="required">*</span>
+                        <i class="input__icon fas fa-lock"></i>
+                        <input type="password" id="regis__pass" placeholder="Mật khẩu" class="form__input">
+                    </div>
+                    <span class="form__errMsg"></span>
                 </div>
+                <span class="link__login">Đã có tài khoản. Đăng nhập ngay?</span>
                 <div class="form__button">
-                    <input type="submit" value="Đăng ký" class="form__btn"></input>
+                    <button class="form__btn">Đăng ký</button>
                 </div>
             </form>
         </div>
@@ -276,7 +296,7 @@
     </div>
 
     <script src="./assets/js/mobile.js"></script>
-    <script src="./assets/js/shopping-cart.js"></script>
+    <script src="./assets/js/vaidate-form.js"></script>
 
 </body>
 
