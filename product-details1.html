@@ -600,27 +600,9 @@
 
     <script src="./assets/js/mobile.js"></script>
     <script src="./assets/js/shopping-cart.js"></script>
+    <script src="./assets/js/script.js"></script>
 
     <script>
-        // Modal
-
-        var popupViews = document.querySelectorAll('.detail-container');
-        
-
-        //javascript for quick view button
-        var childrens = document.querySelector(".modal__change-img").children;
-        var imgMain = document.querySelector(".pro__main-im");
-        var imgDiv = document.querySelectorAll(".modal__ch");
-
-        imgDiv.forEach((item) => {
-            item.addEventListener("click", function(event) {
-                imgMain.src = event.target.src;
-                event.target.classList.add('img__active')
-                for (var i = 0; i < childrens.length; i++) {
-                    childrens[i].classList.remove("img__active");
-                }
-            })
-        })
 
         var valueCount;
 
