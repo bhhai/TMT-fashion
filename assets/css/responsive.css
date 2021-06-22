@@ -299,7 +299,7 @@
         width: 90%;
     }
     .new-container {
-        flex-direction: row;
+        flex-direction: row !important;
         justify-content: space-between;
         flex-wrap: wrap;
         overflow: auto;

@@ -1,10 +1,6 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
 
 // Thumbnail image controls
 function currentSlide(n) {
@@ -46,6 +42,8 @@ var popup = function(popupClick) {
     popupViews[popupClick].classList.add('modal__active');
     overlay.classList.add("modal__active");
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
+
+    // Change img in popup
     var childrens = popupViews[popupClick].querySelector(".modal__change-img").children;
     var imgMain = popupViews[popupClick].querySelector(".pro__main-im");
     var imgDiv = popupViews[popupClick].querySelectorAll(".modal__ch");
@@ -53,9 +51,6 @@ var popup = function(popupClick) {
     imgDiv.forEach((item) => {
         item.addEventListener("click", function(event) {
             imgMain.src = event.target.src;
-            for (var i = 0; i < childrens.length; i++) {
-                childrens[i].classList.remove("img__active");
-            }
         })
     })
 
